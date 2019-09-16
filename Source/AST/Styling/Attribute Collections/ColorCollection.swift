@@ -19,7 +19,6 @@ public typealias DownColor = NSColor
 #endif
 
 public struct ColorCollection {
-
     public var heading1 = DownColor.black
     public var heading2 = DownColor.black
     public var heading3 = DownColor.black
@@ -31,4 +30,30 @@ public struct ColorCollection {
     public var thematicBreak = DownColor(white: 0.9, alpha: 1)
     public var listItemPrefix = DownColor.lightGray
     public var codeBlockBackground = DownColor(red: 0.96, green: 0.97, blue: 0.98, alpha: 1)
+
+    public init(
+        heading1: DownColor = .black,
+        heading2: DownColor = .black,
+        heading3: DownColor = .black,
+        body: DownColor = .black,
+        code: DownColor = .black,
+        link: DownColor = .systemBlue,
+        quote: DownColor = .darkGray,
+        quoteStripe: DownColor = .darkGray,
+        thematicBreak: DownColor = .init(white: 0.9, alpha: 1),
+        listItemPrefix: DownColor = .lightGray,
+        codeBlockBackground: DownColor = .init(red: 0.96, green: 0.97, blue: 0.98, alpha: 1)
+    ) {
+        self.heading1 = heading1
+        self.heading2 = heading2
+        self.heading3 = heading3
+        self.body = body
+        self.code = code
+        self.link = link
+        self.quote = quote
+        self.quoteStripe = quoteStripe
+        self.thematicBreak = thematicBreak
+        self.listItemPrefix = listItemPrefix
+        self.codeBlockBackground = codeBlockBackground
+    }
 }
